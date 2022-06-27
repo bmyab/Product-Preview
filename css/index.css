@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+/* font-family: 
+font-family:  */
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Montserrat', sans-serif; 
+  font-size: 1.4rem;
+  background-color: var(--cream);
+}
+.card{
+  max-width: 35rem;
+  background-color: var(--White);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card .card__img{
+  width: 100%;
+}
+.card .card__img__2{
+  display: none;
+}
+.card .card__content{
+  margin: 2rem 2.5rem;
+}
+.card .card__texts{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--Dark-grayish-blue);
+}
+.card .card__texts .preview{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.card .card__texts .title{
+  font-family:'Fraunces', serif; 
+  color: var(--Very-dark-blue);
+}
+.card .card__texts .paragraph{
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.card .card__cta{
+  margin-top: 4rem;
+  text-align: center;
+}
+.card .card__cta .cta-texts{
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+  padding-block-end: 1.5rem;
+}
+.card .card__cta p{
+  text-decoration: line-through;
+}
+.card .card__cta span{
+  color: var(--Dark-cyan);
+  font-size: 3rem;
+  font-family:'Fraunces', serif; 
+}
+.card .card__cta .cta{
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.card .card__cta .cta:hover{
+  background-color: var(--Very-dark-blue);
+}
+.card .card__cta .cta svg{
+  width: 20px;
+  height: 20px;
+}
+@media screen and (min-width:820px) {
+  .card{
+    max-width: 62rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .card .card__img{
+    display: none;
+  }
+  .card .card__img__2{
+    display: block;
+    width: 100%;
+  }
+  .card .card__content{
+    margin: 3rem;
+  }
+  .card .card__texts .title{
+   font-size: 3.4rem;
+  }
+  .card .card__texts .paragraph{
+    font-size: 1.48rem;
+    line-height: 2.5rem;
+  }
+  .card .card__cta .cta-texts{
+    padding-block-end: 2.5rem;
+  }
+}
